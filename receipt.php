@@ -55,22 +55,24 @@ echo strftime("%A den %d %B %Y");
         <?php
         require 'products.php';
         require 'functions.php';
+        $AmountToPay = 0;
         
         foreach ($_POST as $index => $qty){
             if(strpos($index, 'P_') === 0 && $qty>0){
                 $product=$products [substr($index, strpos($index, "_") + 1)];
+                $AmountToPay = $AmountToPay + priceCampaign($product["price"]) * $qty;
                 ?>
                 <tr><td><?php echo($product["name"]); ?></td> 
                 <td><?php echo($product["color"]); ?></td>
                 <td><?php echo(priceCampaign($product["price"])); ?> SEK</td>
                 <td><?php echo($qty)?></td>
-                <td><?php echo (priceCampaign($product["price"]) * $qty); ?> SEK</td>
-                
+                <td><?php echo (priceCampaign($product["price"]) * $qty); ?> SEK</td>                
                 </tr>
         <?php } 
         }?>
+    
         </table>        
-        
+    <tr>Amount to pay: <?php echo ($AmountToPay); ?> SEK</tr>    
         
 <h2>Your personal information:</h2>
 

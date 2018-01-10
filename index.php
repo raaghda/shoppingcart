@@ -19,6 +19,11 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+        .requiredfield {
+            color: red;
+            font-size: 13px;
+            }
+            
         </style>
     </head>
     
@@ -44,22 +49,28 @@ echo strftime("%A den %d %B %Y");
         require 'functions.php';
         
         foreach ($products as $index => $product){?>
-        <tr><td><?php echo($product["name"]); ?></td> 
+        <tr><td><?php echo($product["name"]); ?></td>  
         <td><?php echo($product["color"]); ?></td>
         <td><?php echo(priceCampaign($product["price"])); ?> SEK</td>
         <td><input type="number" name="P_<?php echo ($index) ?>"></td>
         </tr>
         <?php } ?>
         </table>        
-        
-        
-
+    
 <h2>Your personal information:</h2>
 
-    Name: <input type="text" name="name" value=""><br><br>
-    Address: <input type="text" name="address" value=""><br><br>
-    Phone number: <input type="text" name="phonenumber" value=""><br><br>
-    E-mail: <input type="text" name="email" value=""><br><br>
+    Name: <input type="text" name="name" value="">
+    <?php showError('missingname'); ?>
+    <br><br> 
+    Address: <input type="text" name="address" value="">
+    <?php showError('missingaddress'); ?>
+    <br><br>
+    Phone number: <input type="text" name="phonenumber" value="">
+    <?php showError('missingphonenumber'); ?>
+    <br><br>
+    E-mail: <input type="text" name="email" value="">
+    <?php showError('missingemail'); ?>
+    <br><br>
   
   
   <input type="submit" name="submit" value="Submit">  

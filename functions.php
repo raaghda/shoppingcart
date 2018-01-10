@@ -15,4 +15,11 @@ function priceCampaign($price){
     return $price;
 }
 
+function showError($errorMsg){
+    if(isset($_GET[$errorMsg])){
+        echo '<span class="requiredfield">* Required field </span>';
+    }
+}
+
+
 ?>
