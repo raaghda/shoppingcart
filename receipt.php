@@ -36,7 +36,6 @@ if (!isset($_POST["name"]) or strlen($_POST["name"])==0){
     
     <body style="font-family:Arial">
         <h1>Tech-Wizzard Company</h1>    
-        
         <?php 
         setlocale(LC_TIME, "");
         setlocale(LC_TIME, "sv_SE");
