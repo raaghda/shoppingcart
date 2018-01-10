@@ -58,7 +58,7 @@ echo strftime("%A den %d %B %Y");
 
     Name: <input type="text" name="name" value=""><br><br>
     Address: <input type="text" name="address" value=""><br><br>
-    Phone number: <input type="text" name="number" value=""><br><br>
+    Phone number: <input type="text" name="phonenumber" value=""><br><br>
     E-mail: <input type="text" name="email" value=""><br><br>
   
   
