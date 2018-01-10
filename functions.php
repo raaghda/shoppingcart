@@ -15,11 +15,22 @@ function priceCampaign($price){
     return $price;
 }
 
+/* Error msgs for required fields. Used in index */
 function showError($errorMsg){
     if(isset($_GET[$errorMsg])){
         echo '<span class="requiredfield">* Required field </span>';
     }
 }
 
+/* Check whether delivery will be next day */
+function isDeliveryNextDay(){
+   $dayOfTheMonth = date('j', time());
+   $weekNumber = date('W', time());
+   $time = date('H', time());
+    if ($dayOfTheMonth % 2 == 0 && $weekNumber % 2 != 0 && $time >= 13 && $time < 17) {
+      return True; 
+    }
+    return False; 
+}
 
 ?>
