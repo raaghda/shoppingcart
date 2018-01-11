@@ -48,7 +48,7 @@
               <tr>
                 <th>Product</th>
                 <th>Color</th>
-                <th>Price</th>
+                <th>Unit price</th>
                 <th>Quantity</th>
               </tr>
                 <?php
