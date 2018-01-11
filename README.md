@@ -1,2 +1,2 @@
 # shoppingcart
-Shopping cart with confirmation page
+Shopping cart with confirmation page for TechWizzard
