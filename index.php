@@ -38,7 +38,7 @@
 
         require 'functions.php';
         if (isDeliveryNextDay() ==True){
-            echo ("Varorna kan levereras redan nästa arbetsdag och hela beställningen har fått en 5% rabatt.");
+            echo ("<br>Varorna kan levereras redan nästa arbetsdag och hela beställningen har fått en 5% rabatt.");
         }
 
         ?><br><br>        
